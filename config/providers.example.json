@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "allow_cloud": false,
+  "allow_premium": false,
+  "levels": {
+    "0": "deterministic code",
+    "1": "local or inexpensive model",
+    "2": "economical cloud model",
+    "3": "premium model"
+  },
+  "providers": [],
+  "note": "Documentation-only template. No provider is initialized or called by this release."
+}

@@ -1,0 +1,8 @@
+{
+  "channel": "manual-marketplace",
+  "allow_public_contact": false,
+  "allow_groups": false,
+  "allow_paid_promotion": false,
+  "allow_free_shipping": false,
+  "max_images": 10
+}

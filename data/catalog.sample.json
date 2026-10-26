@@ -1,0 +1,44 @@
+[
+  {
+    "id": "DEMO-001",
+    "title": "Demo desk organizer",
+    "price": "39.90",
+    "currency": "BRL",
+    "category": "office",
+    "source_url": "https://example.invalid/catalog/demo-001",
+    "verified": true,
+    "verified_at": "2026-10-26",
+    "facts": [
+      "Fictional sample product; not offered for sale.",
+      "Three compartments in the fictional specification."
+    ]
+  },
+  {
+    "id": "DEMO-002",
+    "title": "Demo travel mug",
+    "price": "59.00",
+    "currency": "BRL",
+    "category": "accessories",
+    "source_url": "https://example.invalid/catalog/demo-002",
+    "verified": true,
+    "verified_at": "2026-10-26",
+    "facts": [
+      "Fictional sample product; not offered for sale.",
+      "Capacity: 300 mL in the fictional specification."
+    ]
+  },
+  {
+    "id": "DEMO-003",
+    "title": "Demo notebook",
+    "price": "12.50",
+    "currency": "BRL",
+    "category": "stationery",
+    "source_url": "https://example.invalid/catalog/demo-003",
+    "verified": true,
+    "verified_at": "2026-10-26",
+    "facts": [
+      "Fictional sample product; not offered for sale.",
+      "80 sheets in the fictional specification."
+    ]
+  }
+]

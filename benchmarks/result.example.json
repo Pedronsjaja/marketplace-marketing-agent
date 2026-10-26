@@ -1,0 +1,16 @@
+{
+  "task_id": "COPY-001",
+  "provider": null,
+  "model": null,
+  "prompt_version": "1",
+  "status": "NOT_RUN",
+  "quality_score": null,
+  "latency_ms": null,
+  "input_tokens": null,
+  "output_tokens": null,
+  "cost": null,
+  "currency": null,
+  "success": null,
+  "retries": null,
+  "tool_calls": null
+}

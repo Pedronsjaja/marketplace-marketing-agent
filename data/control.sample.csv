@@ -1,0 +1,4 @@
+product_id,state,leads,forwarded,sales,lost
+DEMO-001,VENDA,8,5,2,1
+DEMO-002,ENCAMINHADO,4,3,0,0
+DEMO-003,PUBLICADO,0,0,0,0

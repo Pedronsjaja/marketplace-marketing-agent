@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "evidence": "FICTIONAL",
+  "observations": [
+    {
+      "type": "FATO",
+      "source": "control.sample.csv",
+      "statement": "The synthetic fixture records 12 leads and 2 converted leads."
+    }
+  ],
+  "hypotheses": [
+    {
+      "type": "HIPOTESE",
+      "statement": "A clearer dimensions section may reduce clarification questions.",
+      "status": "NOT_TESTED"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "RECOMENDACAO",
+      "statement": "Define an observation window and comparable cohorts before testing copy."
+    }
+  ],
+  "experiments": []
+}

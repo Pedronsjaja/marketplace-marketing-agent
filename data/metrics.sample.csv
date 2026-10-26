@@ -1,0 +1,9 @@
+metric,value,unit,evidence
+products,3,products,FICTIONAL
+leads,12,leads,FICTIONAL
+forwarded,8,leads,FICTIONAL
+sales,2,converted_leads,FICTIONAL
+lost,1,leads,FICTIONAL
+sales_per_lead,0.16666666666666666,ratio,CALCULATED_FROM_FICTIONAL
+forwarding_rate,0.6666666666666666,ratio,CALCULATED_FROM_FICTIONAL
+outcome_coverage,0.375,ratio,CALCULATED_FROM_FICTIONAL

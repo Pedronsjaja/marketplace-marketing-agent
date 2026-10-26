@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketplace-marketing-agent"
+version = "0.1.0"
+description = "Deterministic local-first workflows for assisted marketplace marketing."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Pedro Henrique"}]
+dependencies = []
+
+[project.scripts]
+marketplace-agent = "marketplace_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
