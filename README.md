@@ -8,7 +8,7 @@ O projeto foi inspirado por um fluxo operacional privado, mas possui implementa�
 
 ## Estado desta versão
 
-Esta página descreve o código da branch `main`. A atualização operacional **V3**, com feedback da plataforma, quarentena de duplicados e preparação de pacotes, foi desenvolvida separadamente no ambiente privado e **ainda não foi incorporada ao código deste repositório**. A publicação automática pelo navegador permanece sem validação de ponta a ponta.
+Esta versão incorpora o **pipeline V4**: filas independentes Facebook/OLX, preflight, feedback confirmado, quarentena de duplicados, substituição, reservas e pacotes locais. Os parâmetros são configuráveis e os exemplos continuam fictícios. A CLI não publica externamente nem contém integração de navegador. O fluxo legado continua disponível; catálogos e históricos operacionais privados não foram importados.
 
 <a id="scope"></a>
 ## Escopo
@@ -16,6 +16,7 @@ Esta página descreve o código da branch `main`. A atualização operacional **
 | Componente | Estado | O que faz |
 |---|---|---|
 | Agente Marketplace | IMPLEMENTADO | PREPARE, registro local de eventos confirmados e ANALYZE |
+| Pipeline V4 | IMPLEMENTADO | Meta 10–15 LIVE, reservas, mínimo Facebook 5 fotos / OLX 1, feedback e quarentena independentes por plataforma |
 | Validação de produtos e cache de rascunhos | IMPLEMENTADO | Valida entradas, identifica revisões de fonte/política/template e evita preparação repetida |
 | Máquina de estados e controle de duplicação | IMPLEMENTADO | Transições válidas, IDs de catálogo e URLs de anúncios únicos, eventos seguros para repetição |
 | Base do gerente de marketing | IMPLEMENTADO | Fatos determinísticos, prioridade para resultados pendentes e sugestões identificadas |
@@ -55,6 +56,8 @@ python scripts/marketplace.py metrics --control data/control.sample.csv
 python scripts/marketplace.py analyze --control data/control.sample.csv
 python scripts/marketplace.py route metrics
 python scripts/marketplace.py route copy
+python scripts/marketplace.py v4 plan
+python scripts/marketplace.py v4 prepare
 python -m unittest discover -s tests -v
 python scripts/validation/audit_public.py
 ```
@@ -65,6 +68,8 @@ Consulte o [exemplo completo](docs/marketplace-example.md) para confirmação, i
 
 <a id="design"></a>
 ## Organização
+
+Consulte o [pipeline V4](docs/pipeline-v4.md) para parâmetros, fotos, estados, modos e limites. O catálogo V4 de exemplo não possui fotos: demonstra bloqueios sem fabricar prontidão.
 
 - **Agente Marketplace:** estado e operações locais explícitos; conflitos secundários de política são informados enquanto a preparação permitida continua.
 - **Gerente de marketing:** distingue FATO, HIPOTESE e RECOMENDACAO. A base implementada usa contagens registradas, sem LLM ou inferência causal.

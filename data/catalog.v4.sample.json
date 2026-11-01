@@ -1,0 +1,26 @@
+[
+  {
+    "id": "DEMO-V4-001",
+    "fictional": true,
+    "title": "Mesa demonstrativa Aurora",
+    "category": "Mesas",
+    "condition": "Novo",
+    "price": "250.00",
+    "currency": "BRL",
+    "source_url": "https://example.com/catalog/demo-v4-001",
+    "verified_at": "2026-11-01",
+    "verified": true,
+    "price_confirmed": true,
+    "price_confirmed_at": "2026-11-01T12:00:00-03:00",
+    "source_valid": true,
+    "identity_clear": true,
+    "facts": ["Produto de demonstração inteiramente fictício."],
+    "attributes": [
+      {"status": "CONFIRMED", "value": "Exemplo fictício para demonstração local."},
+      {"status": "CONFLICTING", "value": "Atributo conflitante: deve ser omitido."},
+      {"status": "TRUNCATED", "value": "Trecho incompleto: deve ser omitido."}
+    ],
+    "photos": [],
+    "platform_status": {}
+  }
+]

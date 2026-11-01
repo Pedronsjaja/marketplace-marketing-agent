@@ -46,10 +46,24 @@ def main(argv=None):
     router.add_argument("--failed-level", type=int, action="append", default=[])
     router.add_argument("--allow-cloud", action="store_true")
     router.add_argument("--allow-premium", action="store_true")
+    pipeline = sub.add_parser("v4", help="Independent platform queues and confirmed feedback")
+    pipeline.add_argument("action", choices=("plan", "prepare", "feedback"))
+    pipeline.add_argument("--settings", default="config/pipeline.v4.example.json")
+    pipeline.add_argument("--catalog", default="data/catalog.v4.sample.json")
+    pipeline.add_argument("--input", help="JSON observation for feedback")
+    pipeline.add_argument("--confirmed", action="store_true")
     args = parser.parse_args(argv)
     try:
         store = Store(args.workspace)
-        if args.command == "route":
+        if args.command == "v4":
+            from .pipeline import run
+            if args.action == "feedback" and not args.input:
+                raise ValidationError("feedback requires --input")
+            result = run(args.workspace, read_json(args.settings),
+                         [] if args.action == "feedback" else read_json(args.catalog), args.action,
+                         feedback=read_json(args.input) if args.input else None,
+                         confirmed=args.confirmed)
+        elif args.command == "route":
             result = asdict(route(args.task, {}, available_levels=args.level, failed_levels=args.failed_level,
                                   allow_cloud=args.allow_cloud, allow_premium=args.allow_premium))
         elif args.command in {"metrics", "analyze", "export"}:
